@@ -1,0 +1,38 @@
+<h5><u>{{description}}</u></h5>
+<form [formGroup]="cierresContablesManagement" (ngSubmit)="cierresContablesManagementSubmit()" novalidate>
+  <div class="row">
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline">
+        <mat-label>{{'Periodo Certificacion'}}</mat-label>
+        <input matInput [matDatepicker]="periodoCertificacion"
+                placeholder="DD / MM / YYYY"
+                formControlName="periodo"
+                (focus)="periodoCertificacion.open()"
+                [matDatepickerFilter]="firstDayOfMonth">
+        <mat-datepicker-toggle matSuffix [for]="periodoCertificacion"></mat-datepicker-toggle>
+        <mat-datepicker #periodoCertificacion></mat-datepicker>
+        <mat-error *ngIf="hasError('periodo', 'required')">{{'Campo obligatorio'}}</mat-error>
+        <mat-error *ngIf="hasError('periodo', 'matDatepickerMin')">{{'Fecha invalida'}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field appearance="outline">
+          <mat-label>{{'Fecha Cierre'}}</mat-label>
+          <input matInput [matDatepicker]="fechaCierre"
+                  placeholder="DD / MM / YYYY"
+                  formControlName="fecha_cierre"
+                  (focus)="fechaCierre.open()">
+          <mat-datepicker-toggle matSuffix [for]="fechaCierre"></mat-datepicker-toggle>
+          <mat-datepicker #fechaCierre></mat-datepicker>
+          <mat-error *ngIf="hasError('fecha_cierre', 'required')">{{'Campo obligatorio'}}</mat-error>
+        </mat-form-field>
+    </div>
+  </div>
+  <div class="row mat-error error" *ngIf="validateEndDatePriorToStartDate()">
+    <div class="col">La fecha de finalización no puede ser anterior a la fecha de inicio</div>    
+  </div>
+  <div class="row justify-content-end actions">
+    <button mat-stroked-button color="basic" class="mat-stroked-button" type="button" [routerLink]="'/cierres-contables'"><span>{{'Volver'}}</span></button>
+    <button mat-raised-button color="primary" type="submit">{{'Confirmar'}}</button>
+  </div>
+</form>

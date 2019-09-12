@@ -1,0 +1,33 @@
+.success {
+    text-align: center;
+    padding: 20px;
+    color: #270;
+    background-color: #DFF2BF;
+    margin-bottom: 24px;
+    .mat-icon {
+        position: relative;
+        top: 5px;
+    }
+}
+
+.error {
+    text-align: center;
+    padding: 20px;
+    color: #D8000C;
+    background-color: #FFBABA;
+    margin-bottom: 24px;
+    .mat-icon {
+        position: relative;
+        top: 5px;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 16px;
+    cursor: pointer;
+    .mat-icon { 
+        font-size: 15px;
+    }
+}

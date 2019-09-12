@@ -1,0 +1,11 @@
+<div class="row notificationMsg">
+  <div class="col-sm-12" *ngIf="notificationMsg">
+    <div class="success" *ngIf="notificationMsg.action === 'success'">
+      <mat-icon>check_circle_outline</mat-icon> {{notificationMsg.msg }}
+    </div>
+    <div class="error" *ngIf="notificationMsg.action === 'error'">
+        <mat-icon>error</mat-icon>  {{notificationMsg.msg }}
+    </div>
+    <div class="close" (click)="close()"><mat-icon>close</mat-icon></div>
+  </div>
+</div>

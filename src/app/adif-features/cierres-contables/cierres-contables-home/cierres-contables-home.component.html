@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-sm-12"><h5><u>Cierres Contables</u></h5></div>
+</div>
+<form [formGroup]="cierresSearchForm" novalidate>
+    <div class="row content-search justify-content-end">
+      <div class="col-lg-6 col-md-6 search">
+        <mat-form-field appearance="outline">
+          <mat-label>{{'Buscar'}}</mat-label>
+          <input matInput placeholder="{{'Buscar'}}" autocomplete="off" formControlName="cierresSearch">
+        </mat-form-field>
+      </div>
+    </div>
+</form>
+<adif-notification></adif-notification>
+<mat-card>
+  <adif-data-table
+    [dataTableSource]="dataTableSource" 
+    [displayedColumns]="columnsToDisplay"
+    [columnsParams]="columnsParams"
+    (eventCaptured)="eventCaptured($event)"
+    [datalength]="datalength"
+    (requestPage)="requestPage($event)"
+    [loading]="loading">
+  </adif-data-table>
+  <div class="row justify-content-center action-col">
+    <div class="actions">
+        <button mat-stroked-button [routerLink]="'cierres-contable-actions'">Nuevo</button>
+        <button mat-stroked-button (click)="edit()" [disabled]="!dataSourceSelected">Editar</button>
+        <button mat-stroked-button [disabled]="!dataSourceSelected" (click)="delete()">Borrar</button>
+    </div>
+  </div>
+  <div class="row justify-content-center action-col">
+    <button mat-stroked-button [disabled]="!dataSourceSelected" (click)="provisiones()">Provisiones Asociadas</button>
+  </div>
+</mat-card>

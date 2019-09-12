@@ -1,0 +1,82 @@
+$lightgrey-shadow: 0 8px 6px -6px lightgrey;
+$content-min-height: 400px;
+$spacing1: 1rem;
+$spacing1p5: 1.5rem;
+$border-gray: 1px solid lightgray;
+
+#home-header {
+    .container {        
+        #header-img {
+            min-height: 120px;
+            background: url(../assets/images/contract.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .header-content {
+            padding: 0;
+            -webkit-box-shadow: $lightgrey-shadow;
+	        -moz-box-shadow: $lightgrey-shadow;
+            box-shadow: $lightgrey-shadow;
+            z-index: 1;
+        }
+    }
+}
+
+#home-content.container {
+    background-color: #FAFCF9;
+    .content {
+        min-height: $content-min-height;
+        > div:first-child {
+            background-color: #E9ECEF;
+            min-height: $content-min-height;
+        }
+        > div {
+            padding-top: $spacing1;
+        }
+        .nav-link.active {
+            background-color: #B9CDCC !important;
+        }
+    
+        .procesos-group {
+            margin-top: $spacing1p5;
+            li {
+                line-height: $spacing1p5;
+                a {
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .navbar {
+        padding: 0 !important;
+    }
+
+    .mat-button {
+        padding: 0 !important;
+        min-width: auto !important;
+    }
+    .matMenu {
+        padding-top: $spacing1;
+        margin-bottom: $spacing1;
+        border-bottom: $border-gray;
+        cursor: pointer;
+        span {
+            top: -7px;
+            left: 3px;
+            position: relative;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+#main-footer {
+    .container {
+        border-top: $border-gray;
+    }
+}
+
+u {
+    color: #001D1F;
+    font-weight: 500;
+}

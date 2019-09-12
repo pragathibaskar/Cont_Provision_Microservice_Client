@@ -1,0 +1,43 @@
+<header id="home-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 header-content">
+          <div id="header-img"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="home-content" class="container">
+  <div class="d-block d-lg-none">
+      <div class="matMenu" [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon><span>Menu</span></div>
+      <mat-menu #menu="matMenu" class="d-block d-lg-none">
+        <div class="mat-menu-item" mat-menu-item>
+            <a routerLink="/cierres-contables">Cierres Contables</a>
+        </div>
+      </mat-menu>
+  </div>
+  <div class="row content">
+    <div class="col-lg-3 d-none d-lg-block">
+      <ul class="list-group mb-5">
+          <li class="list-group-item">
+            <div><u>PROCESOS</u></div>
+            <ul class="nav nav-pills flex-column procesos-group">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/cierres-contables" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Cierres Contables</a>
+                </li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+    <div class="col-lg-9">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>
+<footer id="main-footer">
+  <div class="container bg-light">
+    <div class="row">
+      <div class="col text-right py-3">© 2019 ADIF</div>
+    </div>
+  </div>
+</footer>

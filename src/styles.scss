@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+.mat-drawer-container {
+    background-color: #fff;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+form {
+    width: 100%;
+}
+
+.mat-paginator-container {
+    justify-content: center !important;
+}
+
+mat-card {
+    padding: 0 !important;
+    min-height: 400px;
+    box-shadow: none !important;
+    background-color: #FAFCF9 !important;
+}
