@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
 import { map } from 'rxjs/internal/operators/map';
-import { environment } from '../../../../environments/environment';
+import { environment } from '../../../../environments/environment.prod'; 
 import { BehaviorSubject } from 'rxjs';
 import { WebSocketSubject } from 'rxjs/webSocket';
 import { Notify } from '../../../shared/notification/notification/notification.component';
