@@ -5,6 +5,6 @@ export const environment = {
     'es-ES'
   ],
 const_serverUrl: 'http://cont-service-adifv2.apps.okd.openshifthub.ml',
-provision_serverUrl: 'http://localhost:8095', 
+provision_serverUrl: 'http://prov-service-adifv2.apps.okd.openshifthub.ml', 
 security: 'csrf'
 };
