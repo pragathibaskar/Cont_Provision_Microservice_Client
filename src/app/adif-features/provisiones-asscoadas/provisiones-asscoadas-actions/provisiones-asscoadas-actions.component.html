@@ -5,7 +5,7 @@
       <mat-form-field appearance="outline">
         <mat-label>{{'Codigo Sap Expediente'}}</mat-label>
         <input type="text" matInput [formControl]="codigo_sap_expediente" [matAutocomplete]="auto"
-              [attr.aria-label]="label" placeholder="Codigo Sap Expediente" [errorStateMatcher]="matcher">
+              [attr.aria-label]="Codigo Sap Expediente" placeholder="Codigo Sap Expediente" [errorStateMatcher]="matcher">
         <mat-icon matSuffix *ngIf="whileLoading"><mat-spinner [diameter]="15"></mat-spinner></mat-icon>
         <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)='codigoFn($event.option.value)'>
           <mat-option *ngFor="let codigo of matchingCodigos$ | async" [value]="codigo">
