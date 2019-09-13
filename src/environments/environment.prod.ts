@@ -4,6 +4,7 @@ export const environment = {
   supportedLanguages: [
     'es-ES'
   ],
-  serverUrl: 'http://api-adif-v1.apps.okd.openshifthub.ml/',
-  security: 'csrf'
+const_serverUrl: 'http://localhost:8700',
+provision_serverUrl: 'http://localhost:8095', 
+security: 'csrf'
 };
