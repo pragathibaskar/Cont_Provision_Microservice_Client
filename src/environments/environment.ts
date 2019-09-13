@@ -8,9 +8,8 @@ export const environment = {
   supportedLanguages: [
     'es-ES'
   ],
- // serverUrl: 'http://localhost:8089',
- // const_serverUrl: 'http://localhost:8700',
-//  provision_serverUrl: 'http://localhost:8095',
+ const_serverUrl: 'http://localhost:8700',
+ provision_serverUrl: 'http://localhost:8095',
   security: 'csrf'
 };
 
