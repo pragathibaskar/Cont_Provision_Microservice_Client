@@ -108,7 +108,7 @@ export class CierresContablesActionsComponent implements OnInit {
             this.notificationService.setNotification(TranslationES.cierres_contable.error);
             this.router.navigate(['/cierres-contables']);
           } else {
-            this.notificationService.setNotification(TranslationES.cierres_contable.sorryForIncovinience);
+            this.notificationService.setNotification(TranslationES.cierres_contable.serviceUnAvailable);
             this.router.navigate(['/cierres-contables']);
           }
         });
@@ -124,7 +124,7 @@ export class CierresContablesActionsComponent implements OnInit {
             this.notificationService.setNotification(TranslationES.cierres_contable.error);
             this.router.navigate(['/cierres-contables']);
           } else {
-            this.notificationService.setNotification(TranslationES.cierres_contable.sorryForIncovinience);
+            this.notificationService.setNotification(TranslationES.cierres_contable.serviceUnAvailable);
             this.router.navigate(['/cierres-contables']);
           }
         });
