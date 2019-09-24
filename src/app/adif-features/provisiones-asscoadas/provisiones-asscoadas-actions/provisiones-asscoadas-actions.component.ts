@@ -102,7 +102,7 @@ export class ProvisionesAsscoadasActionsComponent implements OnInit {
           this.notificationService.setNotification(TranslationES.provisiones_contable.error);
           this.previousState();
         } else {
-          this.notificationService.setNotification(TranslationES.provisiones_contable.sorryForIncovinience);
+          this.notificationService.setNotification(TranslationES.provisiones_contable.serviceUnAvailable);
           this.previousState();
         }
       });
