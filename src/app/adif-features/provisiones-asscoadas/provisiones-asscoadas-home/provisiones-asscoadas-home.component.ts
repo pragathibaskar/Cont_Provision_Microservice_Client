@@ -75,7 +75,7 @@ export class ProvisionesAsscoadasHomeComponent implements OnInit {
         this.loading = false;
       }, (error: HttpErrorResponse) => {
         this.loading = false;
-        this.notificationService.setNotification(TranslationES.provisiones_contable.sorryForIncovinience);
+        this.notificationService.setNotification(TranslationES.provisiones_contable.serviceUnAvailable);
       });
   }
 
@@ -98,7 +98,7 @@ export class ProvisionesAsscoadasHomeComponent implements OnInit {
       }
     }, (error: HttpErrorResponse) => {
       this.loading = false;
-      this.notificationService.setNotification(TranslationES.provisiones_contable.sorryForIncovinience);
+      this.notificationService.setNotification(TranslationES.provisiones_contable.serviceUnAvailable);
     });
     this.dataTableSource = this.dataSource.getProvisionesData();
   }
@@ -112,7 +112,7 @@ export class ProvisionesAsscoadasHomeComponent implements OnInit {
         this.loading = false;
       }, (error: HttpErrorResponse) => {
         this.loading = false;
-        this.notificationService.setNotification(TranslationES.provisiones_contable.sorryForIncovinience);
+        this.notificationService.setNotification(TranslationES.provisiones_contable.serviceUnAvailable);
       });
     } else {
       this.provisionesAsscoadasService.searchWithDate({
@@ -126,7 +126,7 @@ export class ProvisionesAsscoadasHomeComponent implements OnInit {
         this.loading = false;
       }, (error: HttpErrorResponse) => {
         this.loading = false;
-        this.notificationService.setNotification(TranslationES.provisiones_contable.sorryForIncovinience);
+        this.notificationService.setNotification(TranslationES.provisiones_contable.serviceUnAvailable);
       });
     }
   }
@@ -164,7 +164,7 @@ export class ProvisionesAsscoadasHomeComponent implements OnInit {
         this.notificationService.setNotification(TranslationES.provisiones_contable.delete);
       }, (error: HttpErrorResponse) => {
         this.loading = false;
-        this.notificationService.setNotification(TranslationES.provisiones_contable.sorryForIncovinience);
+        this.notificationService.setNotification(TranslationES.provisiones_contable.serviceUnAvailable);
       }, () => this.dataSourceSelected = false);
     }
   }
