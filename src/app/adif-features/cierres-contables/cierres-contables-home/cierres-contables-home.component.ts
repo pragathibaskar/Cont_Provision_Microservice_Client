@@ -104,7 +104,7 @@ export class CierresContablesHomeComponent implements OnInit, OnDestroy {
       this.loading = false;
     }, (error: HttpErrorResponse) => {
       this.loading = false;
-      this.notificationService.setNotification(TranslationES.cierres_contable.error);
+      this.notificationService.setNotification(TranslationES.cierres_contable.serviceUnAvailable);
     });
     this.dataTableSource = this.dataSource.getCirresData();
   }
@@ -127,7 +127,7 @@ export class CierresContablesHomeComponent implements OnInit, OnDestroy {
         this.notificationService.setNotification(TranslationES.cierres_contable.delete);
       }, (error: HttpErrorResponse) => {
         this.loading = false;
-        this.notificationService.setNotification(TranslationES.cierres_contable.sorryForIncovinience);
+        this.notificationService.setNotification(TranslationES.cierres_contable.serviceUnAvailable);
       }, () => this.dataSourceSelected = false);
     }
   }
@@ -157,7 +157,7 @@ export class CierresContablesHomeComponent implements OnInit, OnDestroy {
         this.loading = false;
       }, (error: HttpErrorResponse) => {
         this.loading = false;
-        this.notificationService.setNotification(TranslationES.cierres_contable.sorryForIncovinience);
+        this.notificationService.setNotification(TranslationES.cierres_contable.serviceUnAvailable);
       });
     } else {
       this.contablesServiceService.searchWithDate({
@@ -170,7 +170,7 @@ export class CierresContablesHomeComponent implements OnInit, OnDestroy {
         this.loading = false;
       }, (error: HttpErrorResponse) => {
         this.loading = false;
-        this.notificationService.setNotification(TranslationES.cierres_contable.sorryForIncovinience);
+        this.notificationService.setNotification(TranslationES.cierres_contable.serviceUnAvailable);
       });
     }
   }
