@@ -108,7 +108,7 @@ export class ProvisionesAsscoadasHomeComponent implements OnInit {
     if (!this.provisionesSearch.value) {
       this.provisionesAsscoadasService.listAll(this.periodo['periodo'], pageQuery)
       .subscribe((data: ProvisionesContent) => {
-        this.dataSource.loadProvisionesData(data.provision);
+        this.dataSource.loadProvisionesData(data.content);
         this.loading = false;
       }, (error: HttpErrorResponse) => {
         this.loading = false;
