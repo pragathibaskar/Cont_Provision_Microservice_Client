@@ -92,7 +92,7 @@ export class ProvisionesAsscoadasHomeComponent implements OnInit {
         if (startsWithFirst) {
           this.dataTab.paginator.firstPage();
         }
-        this.dataSource.loadProvisionesData(data.provision);
+        this.dataSource.loadProvisionesData(data.content);
         this.datalength = data.totalElements;
         this.loading = false;
       }
