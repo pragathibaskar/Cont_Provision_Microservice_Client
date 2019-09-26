@@ -28,7 +28,7 @@ export interface ProvisionesAsscodas {
 }
 
 export interface ProvisionesContent {
-  provision: ResponseProvisionesAsscodas[];
+  content: ResponseProvisionesAsscodas[];
   numberOfElements: number;
   totalElements: number;
 }
